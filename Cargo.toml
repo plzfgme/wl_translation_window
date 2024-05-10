@@ -1,0 +1,27 @@
+[package]
+name = "wl_translation_window"
+version = "0.1.0"
+edition = "2021"
+description = "translate the text and display it in a window under cursor, works on wayland"
+authors = ["plzfgme"]
+license = "mit"
+repository = "https://github.com/plzfgme/wl_translation_window"
+
+[profile.release]
+lto = true
+opt-level = 3
+strip = "symbols"
+codegen-units = 1
+
+[dependencies]
+anyhow = "1.0.83"
+clap = { version = "4.5.4", features = ["derive"] }
+gio = "0.19.5"
+glib = "0.19.5"
+gtk4 = "0.8.2"
+gtk4-layer-shell = "0.3.0"
+regex = "1.10.4"
+reqwest = "0.12.4"
+smithay-client-toolkit = "0.18.1"
+tokio = { version = "1.37.0", features = ["rt-multi-thread"] }
+wayland-client = "0.31.2"
