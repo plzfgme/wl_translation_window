@@ -1,6 +1,6 @@
 # wl_translation_window
 
-Translate the text (with google translate) and display it in a window under cursor, works on wayland.
+Translates the text (with google translate) and displays it in a window under cursor, works on wayland.
 
 Only tested on sway.
 
