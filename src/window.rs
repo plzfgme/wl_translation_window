@@ -176,6 +176,7 @@ impl TranslationWindow {
             .style_context()
             .add_provider(&css_provider, gtk4::STYLE_PROVIDER_PRIORITY_APPLICATION);
         let src_textview = gtk4::TextView::new();
+        src_textview.set_wrap_mode(gtk4::WrapMode::Word);
         self.src_textview.set(Some(&src_textview));
         scrolled_src_textview.set_child(Some(&src_textview));
         src_textview.buffer().set_text(&self.config.src_text);
@@ -191,6 +192,7 @@ impl TranslationWindow {
             .style_context()
             .add_provider(&css_provider, gtk4::STYLE_PROVIDER_PRIORITY_APPLICATION);
         let dst_textview = gtk4::TextView::new();
+        dst_textview.set_wrap_mode(gtk4::WrapMode::Word);
         self.dst_textview.set(Some(&dst_textview));
         let css_provider = gtk4::CssProvider::new();
         css_provider.load_from_data("textview.error { background-color: #ff0000; }");
